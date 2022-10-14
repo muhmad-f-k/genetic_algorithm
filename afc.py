@@ -26,16 +26,18 @@ valve_position ="Idle valve position can be between 0.5−5.0 "
 # 4- Mutation (randomly invert one or more gene in chromosome)
 
 #feature_1 = "0-45"
-#feature_2 = "2-5"
+#feature_2 = "2-5" # den må vær helt tall både i mutat og ev
 #feature_3 = "0.55 - 0.75"
 #feature_4 = "1000 - 2000"
 #feature_5 = "0.5 - 5.0"
+
+#formel skal vær i eva
 import random as rnd
 mutation_rate = 0.05 # 5%
 class Chromosome:
     def __init__(self, feature_1, feature_2, feature_3, feature_4, feature_5):
         self.feature_1 = feature_1 #[0 - 45 grader]
-        self.feature_2 = feature_2 #[2-5]
+        self.feature_2 = feature_2 #[2-5] Må vær helt tall
         self.feature_3 = feature_3 #[0.55 - 0.75]
         self.feature_4 = feature_4 #[1000 - 2000]
         self.feature_5 = feature_5 #[0.5 - 5.0 grader]
